@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> <!--Turn on the Internet to experience our website -->
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css"> <!-- Used for the social icons -->
+  <link rel="stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script> <!-- script to animate icons -->
+<link rel="stylesheet" type="text/css" href="style/slideshow.css"></link>
+  <link href="style/index.css" rel="stylesheet">
+  <link href="style/buttons.css" rel="stylesheet">
+  <title>Main page</title>
+
+<script>
+    // Wait for window ready
+    //.ready() Specifies a function to execute when the DOM is fully loaded
+    $(document).ready(function(){
+        // Animate loader off screen after 1s
+        $(".loader").delay(2000).fadeOut("slow");;
+    });
+</script>
+
+<!-- ANIMATING ICONS -->
+  <script> <!-- Make icons slide as soon as the mouse hover div-->
+     function log1(event) {    //block about taxi                                 
+    TweenLite.from(document.getElementById("pic1"), // element
+       2,   // duration
+      {   // tween parameters
+         x: 500 //position of a picture     
+      });  
+    document.getElementById("pic1").style.visibility = "visible"; //make an image visible
+    };
+    
+    function log2(event) { //block about renting
+    TweenLite.from(document.getElementById("pic2"), // element
+       2,   // duration
+      {   // tween parameters
+         x: 500 //position of a picture 
+      }); 
+    document.getElementById("pic2").style.visibility = "visible"; //make an image visible
+    };
+    
+    function log3(event) { //block about online check in
+    TweenLite.from(document.getElementById("pic3"), // element
+       2,   // duration
+      {   // tween parameters
+         x: 500 //position of a picture 
+      }); 
+    document.getElementById("pic3").style.visibility = "visible"; //make an image visible
+     };
+  </script>
+  <!-- END OF THE PART OF ANIMATING ICONS -->
+
+
+<script type="text/javascript"> <!-- Use Jquery to get the date-->
+$(function () {  
+$("#datepicker").datepicker({         
+autoclose: true,         
+todayHighlight: true 
+}).datepicker('update', new Date());
+});
+
+$(function () {  
+$("#datepicker1").datepicker({         
+autoclose: true,         
+todayHighlight: true 
+}).datepicker('update', new Date());
+});
+
+$(function () {  
+$("#datepicker2").datepicker({         
+autoclose: true,         
+todayHighlight: true 
+}).datepicker('update', new Date());
+});
+
+</script>
+
+
+  <!--Smooth scrolling-->
+<script type="text/javascript">
+
+    /*scrollTop(): returns the vertical scrollbar position for the selected elements, when scrollbar is on top position = 0*/
+    $(document).ready(function(){
+         $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},1800);
+        return false;
+    });
+});
+
+</script>
+
+<!--Jquery for accordion-->
+
+<script type="text/javascript">
+
+  //Use Jquery to slideUp the accordion
+    $(function() {
+  // hide accordion except the first one
+  $("#accordion_hover .accordion:not(:first)").hide();
+  // Apply hover event to h3
+  $("#accordion_hover h3").hover(function(){
+    // choose .accordion
+    //the content go after the h3 so use next()
+    $accordion = $(this).next();
+    //Check if hidden, the content will be shown
+    if ($accordion.is(':hidden') === true) {
+      //$("#accordion_hover .accordion").slideUp(); -- make the other accordion slideUp when the selcted one slidedown
+      $accordion.slideDown();
+    } 
+  });
+});
+    //When scrolling the accordion slideUp
+  window.onscroll = function() {myFunction()};
+  function myFunction() {
+    if (document.body.scrollTop || document.documentElement.scrollTop) {
+      $("#accordion_hover .accordion").slideUp();
+    }
+   
+
+  }
+    
+  </script>
+
+
+    <!--Modal about us-->
+<script type="text/javascript">
+
+
+window.onload = function(){
+var modal= document.getElementById('about_modal');
+var btn = document.getElementById('about_activate');
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+};
+  
+</script>
+
+<script type="text/javascript">
+  //Check email_subscribe
+  function check_subscribe_email(){
+    var email = document.getElementById('subscribe_email');
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+     if (mailformat.test(email.value))  
+  { 
+          var modal = document.getElementById('Subcribe_modal');
+          
+          var btn = document.getElementById("btn_subscribe");
+        
+          var span = document.getElementsByClassName("close_subscribe")[0];
+       
+          
+          modal.style.display = "block";
+
+          span.onclick = function() {
+          modal.style.display = "none";
+          }
+          // Click anywhere outside of the modal to close
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+  }
+            return (true); 
+  }
+
+   alert("You have entered an invalid email address!") 
+  return (false);  
+}  
+ 
+
+</script>
+
+
+<script type="text/javascript">
+        //function for modal confirmation
+        
+        //Function to check email
+        function checkEmail()  
+{  
+  var email = document.getElementById('email');
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+ if (mailformat.test(email.value))  
+  {  
+          var x = document.forms["rent_form"]["fname"].value;
+          var y = document.getElementById("pickup").selectedIndex;
+          console.log(y);
+          //Check if pickup option an dname be filled
+          if (x == "" || y == 0) {
+              alert("Make sure you have filled everything");
+              return (false);
+          }
+          else{
+            // Get the modal
+          var modal = document.getElementById('myModal');
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("btn_deposit");
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close_confirm")[0];
+          // When the user clicks the button, open the modal 
+          
+          modal.style.display = "block";
+          // Click anywhere outside of the modal to close
+          window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+  }
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+          modal.style.display = "none";
+          }
+            return (true); 
+          }
+    
+  }  
+  alert("You have entered an invalid email address!") 
+  return (false);  
+}  
+ 
+
+</script>
+
+<!-- LIUBOV PART OF SLIDING IMAGES -->
+   <script type="text/javascript"> 
+   $(document).ready(function(){ 
+
+    const num = 3; //number of slides
+
+    //calculate how much to scroll
+    var width = document.getElementById('slideshow').scrollWidth / num; 
+
+    //current slide number
+    var slide_number = 1;   
+
+    //change image
+    setInterval(function(){
+      if (slide_number < num){ //if the picture is not the last one
+        //move to next slide
+        $("#slideshow").animate({
+          scrollLeft: width * slide_number
+        },500); //the picture will hold for 500 miliseconds         
+        slide_number++; 
+      }
+      else //if it is the las picture
+      {
+        //go to the first slide
+        $("#slideshow").animate({
+          scrollLeft: 0
+        },500);
+        slide_number = 1;
+      }
+    }, 4500); //change image for 4500-500=4000 milisecons (4s)    
+  });
+   </script>
+   <!-- END OF PART OF SLIDING IMAGES -->
+<script type="text/javascript">
+        //function for modal confirmation
+        // Click anywhere outside of the modal to close
+    window.onclick = function(event) {
+      var modal = document.getElementById('myModal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+  }
+    
+    /*  Check info filled */
+        function Check_renting(){
+          var name = document.getElementById('name').value;
+          var address = document.getElementById('address').value;
+          var f = document.getElementById('from').value;
+          var t = document.getElementById('to').value;
+        
+          var num = document.getElementById('number').value;
+          var zip = document.getElementById('zip').value;
+            var zipl = zip.length;
+            var numl = num.length;
+
+    if(f == "" || t == "" || name == "" || address == "" || num == "" || zip == ""){
+      alert("Some info are missing"); /*if one of input is missing*/
+      return (false);} 
+
+    if(f.length < 4 || t.length < 4){ /*if from and to incorrect*/
+      alert("Enter valid time info !!");
+      return(false);
+            }
+
+    if(zipl < 5 || numl != 12 ){ /* if zip and number incorrect*/
+      alert("Enter valid numbers");
+      return(false);  
+          } 
+
+    else{
+       // Get the modal
+          var modal = document.getElementById('myModal');
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("btn_deposit");
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+          // When the user clicks the button, open the modal 
+          
+          modal.style.display = "block";
+          span.onclick = function() {
+          modal.style.display = "none";
+          }
+            return (true); 
+          }
+  } 
+
+</script>
+
+
+  </head>
+  <!--Scrollspy plugin is used to automatically update links in a navigation list based on scroll position-->
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+
+    <!-- LOADING -->
+    <div class="loader"></div>
+    <!-- Ends LOADING -->
+<div class="all_body">
+<div class="row"> <!--Bootstrap Grid View-->
+    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    
+    <img src="style/image/car.png" style="display:block ; margin-left:20px; margin-top: 8px; margin-bottom: 8px; margin-right: 5px; opacity: 0.8; float: left" class="img-rounded" width="35" height="35">
+      <a class="navbar-brand company_name" href="#myPage">4Wheels</a>
+    <div class="collapse navbar-collapse menu_name" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#subscribe">Subscribe</a></li>
+        <li><a href="#taxi">Taxi</a></li>
+        <li><a href="#renting">Renting</a></li>
+        <li><a href="#moving">Moving</a></li>
+        <li><a href="#about" id="about_activate">About Us</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div> 
+</nav>
+      
+            <!--            ABOUT US MODAL VIEW END       -->
+          <div id="about_modal" class="modal">
+                <div class="modal-content" style=" content-align:center;">
+                    <span class="close about_close">x</span>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="about_us_header">ABOUT US</h3>
+                            <br>
+                            <p class="about_us_text">
+                                <strong>4Wheels</strong> is a medium of using transportation via using app. It is designed to provide services related with - (calling a taxi, renting a van and moving house services) to the customers. These three main function provides good services and our vision is to serve customers with ease and comfortness. So, pick your choices and get started with 4Wheels. 
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-4" style="text-align:center;">
+                                <div class="image_div">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <img class="img-circle about_image" src="style/image/taxi1.jpeg" width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4 class="image_title_div">Taxi Service</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="text-align:center;">
+                                <div class="image_div">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <img class="img-circle about_image" src="style/image/movingPerson.jpg" width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4 class="image_title_div">Moving House</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" style="text-align:center;">
+                                <div class="image_div">
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <img class="img-circle about_image" src="style/image/rentingCar.jpg" width="100%">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4 class="image_title_div">Renting Cars</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+
+
+                </div>
+            </div>
+
+
+
+            <!--            ABOUT US MODAL VIEW END       -->
+
+</div>
+  </div>    
+
+  
+    <div class="row" id="home">  <!--Bootstrap Grid View-->
+    <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4 text-center">  <!--1st column-->
+        <div class="optional_box">   
+          <header> <h1> Calling Taxi </h1> </header>
+          <p> <strong> Download </strong> an application and get <br> a <strong>ride </strong> to whenever you want </p> <br>
+
+          <footer> <button id="button_optional"> <a href="#"> Click here!</a></button> </footer>
+
+
+
+        </div>
+
+
+    </div> 
+    <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4 text-center">  <!--2nd column-->
+    <div class="optional_box">   
+          <header> <h1> Renting Car </h1> </header>
+          <p> <strong>Book</strong> a rental car can never <br>be <strong>easy</strong> like that! </p> <br>
+
+          <footer> <button id="button_optional"> <a href="#"> Click here!</a></button> </footer>
+
+
+
+        </div>
+
+    </div> 
+    <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4 text-center">  <!--3rd column-->
+    <div class="optional_box">   
+          <header> <h1> Moving Service </h1> </header>
+          <p> Oulu's <strong>favorite solution</strong> for <br>residential moving services! </p> <br>
+
+          <footer> <button id="button_optional"> <a href="#"> Click here!</a></button> </footer>
+
+
+
+        </div>
+
+    </div> 
+
+  </div>
+            <!--Subscribe tab-->
+     <div class="row" id="subscribe"><!--Bootstrap Grid View-->
+    <div class="content-fluid text-center form_sub"> 
+    <div class="sub_container"> <!--Make Subcribe tab higher-->
+    <form class="form-inline">
+          <h1 style="font-size: 5em"><strong>SUBSCRIBE US</strong></h1>
+          <p>Have more chances to meet great discounts</p>
+    <div class="input-group">
+          <input type="email" id="subscribe_email" class="form-control" size="100" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger" id="btn_subscribe" onclick="check_subscribe_email()">Subscribe</button>
+      </div>
+    </div><br><br>
+    <p id="slogan_sub" style="font-style: italic">"Who doesn't want promotion ...?"</p>
+  </form>
+   <!-- Lack of content -->
+     </div> 
+     </div>  
+     </div>
+
+<!-- The Modal -->
+<div id="Subcribe_modal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span id ="close_subscribe" class="close_subscribe">×</span>
+      <h2>Thank you</h2>
+    </div>
+    <div class="modal-body">
+      <p>Activate the 4wheels code to receive our daily deals</p>
+      <p></p>
+    </div>
+  </div>
+
+</div>
+
+     <!--Calling Taxi tab-->
+  
+  <div class="row taxi_tab" id="taxi" onmouseenter="log1(event)"> <!-- LIUBOV ADD ONMOUSEHOVER TO DO SLIDING OF ICONS -->
+  <div class="content-fluid">
+    <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8">
+      <h2> Why Us ?</h2><br>
+      <img src="arrow.gif" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top:-5px ; position: relative;" > <h3>No price worry </h3> </img><br>
+      <p> The price displays right on the application, you just need to pay the accurate money to enjoy your trip. </p> <br>
+      <img src="arrow.gif" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3> Active and Modern</h3> <br>
+      <p> One touch, trip starts. </p> <br>
+      <img src="arrow.gif" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3>Safe and sound </h3> <br>
+      <p> Share your trip details with loved ones for added safety or even just to let them know you're on your way.</p> <br> <br>
+      
+      <p class="taxi_note"><i>*Only available on mobile applications.  </i></p>
+
+      <br> <br>
+
+  
+ 
+    </div><!--End div col 8-->
+
+    <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
+      <div class="text-center photos">
+      <img src="style/image/taxi.png" width="300" height="300" id="pic1" style= "visibility: hidden;"> <!-- LIUBOV ADD ID OF ICON AND MAKE IT INITIALLY UNVISIBLE -->
+ 
+      <div class="taxi_heading"> TAXI </div> <!-- Thieu hieu ung  -->
+      </div>
+    </div>
+    
+  </div><!--End div content-fluid-->
+  </div>
+            <!--Acordion-->
+  <div class="row taxi_tab" id="taxi">
+    <div class="content-fluid">
+    <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8">
+      <div>
+          <h2>Ride is right at your fingertips</h2><br><br>
+      <div id="accordion_hover">
+    <img src="style/image/one.png" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3>Select destination</h3>
+    <div id="step1" class="accordion">
+    <p>Pickup from anywhere.Key in your pick-up and drop-off locations to get your estimated fare. Then, tap <i>Taxi now</i>.</p></div><br><br>
+
+    <img src="style/image/two.png" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3>Get a Driver</h3>
+    <div id="step2" class="accordion">
+    <p>4Wheels will find the nearest available driver. One tap and a car comes directly to you.</p></div><br><br>
+    
+    <img src="style/image/three.png" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3>Track your driver</h3>
+    <div id="step3" class="accordion">
+    <p>With <i>tracking</i> function, it is easy to know your driver’s location and estimated time of arrival in real-time. You can watch over movement of the driver through their location.</p></div><br><br>
+
+    <img src="style/image/four.png" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3>Safe Payment</h3>
+    <div id="step4" class="accordion">
+    <p>We have clear and transparent pricing list right after you completed 2 previous step. Never haggle with drivers again on payments and be confident and assured of what you are being charged for.</p></div><br><br>
+    
+    <img src="style/image/five.png" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3>Arrive happy and Spread the love</h3>
+    <div id="step5" class="accordion">
+    <p>With our driver feedback tool, share your trip details with loved ones for added safety or even just to let them know you’re on your way. Love the app? Invite friends and earn <i>Wheely credits</i>.</p></div><br><br>
+      </div>
+    </div>
+    </div><!--End div col 8-->
+  <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4">
+      <!--Thieu y tuong o day-->
+      </div>
+
+    </div>
+
+  </div><!--End div content-fluid-->
+  </div>
+
+    <!-- End of Calling Taxi Tab -->
+ 
+  <!-- Renting Function from here -->
+   <div class="row renting" id="renting" onmouseenter="log2(event)"> <!-- LIUBOV ADD ONMOUSEHOVER TO DO SLIDING OF ICONS -->
+  
+    <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6"><br><br>
+      <h2 style="color:rgba(0, 138, 239, 1);"> Renting a car</h2><br><br>
+      <div class="renting_container">
+      <div class="form-group"> <!-- Form begins from here -->
+      <label for="pickup"> Select pickup location: </label>
+      <select class="form-control" id="pickup">
+      <option value="0"></option>
+      <option value="1"> Hanhitie </option>
+      <option value="2"> Kirkkokatu </option>
+      <option value="3"> Kajaanintie </option>
+      </select>
+      </div>
+      <label>Select date: </label>
+        <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" type="text" readonly=""> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span> 
+      </div>
+      <br>
+      <label>Return date: </label>
+        <div id="datepicker1" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" type="text" readonly=""> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span> 
+      </div>
+
+      <br>
+      <form id="rent_form">
+      <div>
+      <label>Type of cars</label><br>
+      <input type="radio" name="type_seat" value="4" checked>&nbsp;4 seats&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="radio" name="type_seat" value="7">&nbsp;7 seats<br><br>
+      </div>
+                <div class="input-group">
+        <span class="input-group-addon">Name</span>
+        <input id="fname" type="text" class="form-control" name="fname" placeholder="Fill your full name" required>
+                </div>
+      <br>  
+        <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input id="email" type="email" class="form-control" name="email" placeholder="Email" required>
+       </div><br>
+        <button id="btn_deposit" type="button" class="btn btn-primary button_deposit" onclick='checkEmail()'>DEPOSIT NOW !</button><br><br>
+      </form>
+      <p style="color: #007acc"><i>*Also available on mobile applications.  </i></p>
+      </div>
+      </div>
+        <!--FORM ENDING-->
+        
+      <div class="col-sm-6 col-xs-6 col-md-6 col-lg-6">
+      <div class="text-center photos">
+      <img src="style/image/thumpup.png" width="200" height="200" id="pic2" style= "visibility: hidden;"> <br><br><br><br> 
+      <!-- LIUBOV ADD ID OF ICON AND MAKE IT INITIALLY UNVISIBLE -->
+      <!-- Persona -->
+      <!-- Persona 1 -->
+      
+      <div class="person-card" style="display:inline-block; float:left;" >
+      <img class="person-img" src="style/image/persona1.PNG" />
+      <div class="person-info">
+      <div class="details-title">
+      <span>Mikael Mannonen</span><br>
+      <small>Service Reviewer</small> <br>
+      </div>
+      <div class="details-body">
+      4Wheels has given the user the comfort to rent a car with a big variety of selection. The car was totally comfortable and new. The renting and returning processes were completely simple and fast. I would rate it 4.5/5 !
+      </div>
+      </div>
+      </div>
+      
+
+      <!-- Persona 2 -->
+      
+      <div class="person-card" style="display:inline-block; float:left;">
+      <img class="person-img" src="style/image/persona2.PNG" />
+      <div class="person-info">
+      <div class="details-title">
+      <span>Huong Pham</span><br>
+      <small>University Lecturer</small> <br>
+      </div>
+      <div class="details-body">
+      Thanks to 4Wheels, I am not worried when I am having some important meetings since the service is very fast and friendly!.
+      </div>
+      </div>
+      </div>
+       
+      <!--Persona Ends -->
+      </div>
+      </div>
+      </div>
+
+        <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close close_confirm">×</span>
+      <h2>Confirmation</h2>
+    </div>
+    <div class="modal-body">
+      <p>Are you sure with all your info?</p>
+      <p></p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-proceed"><span>Proceed</span></button>
+    </div>
+  </div>
+
+</div>
+
+
+      <!--Online checking in -->
+
+   <div class="row checkin_tab" id="renting" onmouseenter="log3(event)"> <!-- LIUBOV ADD ONMOUSEHOVER TO DO SLIDING OF ICONS -->
+
+  <div class="content-fluid">
+
+  <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 checkin_tab">
+  <h2 style="color:white"> Online Check in</h2><br>
+    <p style="text-align: center; color: white"><i>A little time saved makes a big difference</i></p> <br><br>
+    </div>
+
+    <div class="col-sm-8 col-xs-8 col-md-8 col-lg-8 checkin_tab">
+      
+      <img src="arrow.gif" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top:-5px ; position: relative;" > <h3>Get to the fun faster</h3> </img><br>
+      <p>No more spending time at paper work at the counter. As a 4Wheels client, your info has already been saved in our system, allowing you to check in or view your reservation at any time.</p> <br>
+      <img src="arrow.gif" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3>Easy step to check in</h3> <br>
+      <p>Log in via <strong><a href="#">4Wheels Online Check-In</a></strong> and fill out the corresponding reservation form.</p> <br>
+      <img src="arrow.gif" width="48" height="42" style="float:left; vertical-align:middle; border-radius: 90%; display:inline-block; margin-top: -5px; position: relative;" > <h3>No waiting, no problem!</h3> <br>
+      <p>When you arrive, simply show your driving licence and credit card to get your keys and away you go</p> <br> <br>
+
+    </div>
+
+    <div class="col-sm-4 col-xs-4 col-md-4 col-lg-4 checkin_tab">
+      <div class="text-center photos1">
+      <img src="style/image/checkin.png" width="300" height="300" id="pic3" style= "visibility: hidden;"> <!-- LIUBOV ADD ID OF ICON AND MAKE IT INITIALLY UNVISIBLE -->
+
+      <div class="taxi_heading"> Modern feature </div>
+      </div>
+    </div>
+
+    </div></div>
+  
+  <!-- End of Renting function -->   
+
+  <!-- Moving function -->
+    <div class="row " id="moving">  
+    
+
+    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12 ">
+    
+      
+     
+      <div class="moving_container">
+   <h2>Moving</h2><br>
+       <label>Select date: </label>
+        <div id="datepicker2" class="input-group date" data-date-format="dd-mm-yyyy"> 
+        <input class="form-control" type="text" readonly=""> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span> 
+      </div>
+
+      <div class="form_group"><br>
+      <label>Amount of hours:</label><br>
+      <label>From:</label> 
+      <input type="text" class="form_control" id="from" name="from" placeholder="8:00" maxlength="5" size="5">
+      &nbsp;&nbsp;&nbsp;<label>To:</label> 
+      <input type="text" class="form_control" id="to" name="to" placeholder="12:00" maxlength="5" size="5"><br>
+      </div>
+
+      <div class="form-group">
+      <label for="add">Address: </label>
+      <input type="text" class="form-control" id="address">
+      <label>Zip Code: </label><br>
+      <input type="text" class="form_control" id="zip" name="zipcode" value="" maxlength="5" size="5">
+      </div>
+
+      <div class="input-group">
+      <span class="input-group-addon">Name</span>
+      <input id="name" type="text" class="form-control" name="name" placeholder="Fill your full name">
+      </div>
+      <br>
+      <div class="input-group">
+      <span class="input-group-addon">Contact number</span>
+      <input id="number" type="´number" class="form-control" name="number" placeholder="358-xxxx-xxxxx">
+      </div> <br><br><br>
+      <button type="button" class="btn btn-primary button_deposit" onclick='Check_renting()'>PROCEED NOW !</button><br><br>
+
+      </div>
+
+
+      
+      <!-- THIS IS THE PART OF ANIMATION DONE BY PRIYA AND LIUBOV! -->
+    
+    <!-- LIUBOV PART OF SLIDESHOW -->
+    <div id="slideshow-wrapper"> <!-- the wrapper of the block with images -->
+      <div id="slideshow">
+      <!-- list of images -->
+        <img src="./style/image/slide-1.jpg" width="100%"></img>
+        <img src="./style/image/slide-2.jpg" width="100%"></img>
+        <img src="./style/image/slide-3.jpg" width="100%"></img>
+      </div>      
+    </div>
+    <!-- END OF THE PART OF SLIDESHOW -->
+      
+    </div>
+    
+ 
+  </div>
+
+  <!-- End of moving function -->
+
+  
+  
+
+  <div class="row form_sub body" id="taxi">
+  
+    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12"><br><br>
+      <h2 style="color:white"> Download 4Wheels</h2><br><br>
+      <div class="download_stores_middle">
+      <div style="font-size: 2em; color:white"> Scan QR Code </div><br>
+      <img src="style/image/qrcode.png" width="143" height="141"> <br>
+      <br><div style="font-size: 2em; color:white"> OR </div><br>
+      </div>
+      <div class="download_stores_middle">
+      <img src="style/image/googleplay.png" width="200" height="69.4" >
+      <img src="style/image/appstore.png" width="200" height="69.4" >
+      <br><br>
+      </div>
+
+      
+    </div>
+    
+    
+  </div>
+  
+
+     <!--End of Download Taxi App -->
+    <!-- Back to the top -->
+      <div class="row taxi_tab" id="#">
+      
+        <div class="icons social">
+            <a href="http://twitter.com/4Wheels" class="icon-button twitter"><i class="icon-twitter"></i><span></span></a>
+            <a href="http://facebook.com/4Wheels" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+            <a href="http://plus.google.com/4Wheels" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a> <br>
+        <div style="font-size:35%; color:white;">  Copyright © 2010-2016 4Wheels of Finland, Inc. All rights reserved.</div>
+        </div>
+      
+      <footer style="text-align:center; margin-top: 30px">
+      <div class="circletothetop scrollToTop"> <a href="#">
+          <span class="glyphicon glyphicon-chevron-up "><br></span>
+      </a> </div>
+      </footer>
+
+      </div>
+    <!--End of "Back to the top" -->
+
+  </div>
+  </body>
+</html>

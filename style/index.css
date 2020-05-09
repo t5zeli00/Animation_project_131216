@@ -1,0 +1,679 @@
+	@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Raleway|Chewy|Josefin+Sans|Open+Sans|Lato:700|Bungee');
+
+ body {
+	background-image: url('image/banner.jpeg');
+	background-repeat: repeat;
+} 
+/*Loading*/
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999; /*on top*/
+    background: url("image/load.gif") center no-repeat #fff;
+}
+/*End loading*/
+.col-sm-12 {
+			background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.navbar { /*navbar menu color*/
+      font-family: 'Josefin Sans', sans-serif;
+      margin-bottom: 0;
+      background-color: rgba(30, 146, 235, 0.6);
+      border: 0;
+      font-size: 20px !important;
+      letter-spacing: 4px;
+      opacity: 0.8;
+  }
+.navbar-nav li a {
+	color:white !important;
+}
+
+/*navbar scrolling color*/
+.navbar-nav li a:hover, .navbar-nav li.active a { 
+    color:#00ffff !important;
+	background-color: black!important;
+	opacity: 1!important;
+  }
+
+.nav .navbar-nav .navbar-right {
+	color:white !important;
+}
+
+.navbar-default .navbar-brand{
+			font-family: 'Chewy', cursive;
+			color: white !important;
+}
+.text-center {
+			margin-top:150px;
+}
+
+
+/*Modal about us*/
+
+
+.about_us_header {
+    text-align: center;
+   	font-size: 3em!important;
+    font-weight: bold;
+    padding: 2px 16px;
+}
+
+.about_us_text {
+	padding: 2px 16px;
+    font-size: 18px;
+    text-align: center;
+    font-style: italic;
+}
+
+.about_close{
+	padding: 2px 16px;
+}
+.about_image {
+    max-width: 250px;
+    
+}
+
+.image_div {
+    text-align: center;
+}
+
+
+
+.image_title_div {
+    text-align: center;
+    margin-left: auto;
+    text-decoration: underline;
+    margin-top: 15px;
+}
+
+
+
+
+ /*Modal Abou us end*/       
+
+.optional_box {
+			background: rgba(52, 27, 43, 0.5);
+			color: white;
+			padding: 3em;
+			text-align: center;
+			border: 1px solid white;
+			display:inline-block;
+			max-width: 500px;
+
+			}
+
+
+
+.optional_box header {
+				display: inline-block;
+				border-bottom: solid 2px;
+				border-top: solid 2px;
+				margin: 0 0 2em 0;
+				padding: 3px 0 3px 0;
+				font-family: 'PT Sans Narrow', sans-serif;
+		}
+
+.optional_box header h1 {
+					border-bottom: solid 2px;
+					border-top: solid 2px;
+					font-size: 2.5em;
+					font-weight: 900;
+					letter-spacing: 0.2em;
+					margin: 0;
+					padding-left: 0.05em;
+					position: relative;
+					text-transform: uppercase;
+				}
+
+.optional_box p {
+			letter-spacing: 0.1em;
+			margin: 0;
+			text-transform: uppercase;
+			text-align: center;
+			font-family: 'Raleway', sans-serif;
+}
+.optional_box a {
+			color:white;
+}
+
+
+#button_optional {
+	font-family: 'Lato', sans-serif;
+    background: none;
+    border: solid 1px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    min-width: 18em;
+    padding: 0 0.75em;
+    line-height: 3.75em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+	}
+
+#button_optional:hover, #button_optional :active  {
+			background: rgba(188, 202, 206, 0.15);
+			color: white;
+			border-color: inherit;
+		}
+
+.form_sub{
+	opacity: 0.9;
+	background-color: #bce0ee!important;
+
+}
+.sub_container{
+	min-height: 300px;
+}
+
+
+.content-fluid {				/*space between two tabs*/
+	padding: 60px 50px;
+}
+
+.taxi_tab {
+	background-color: white;
+}
+
+h3 {								/*Contents in every tabs*/
+	font-family: 'Open Sans', sans-serif;
+	margin-left: 70px;
+	margin-top: auto;
+	font-size:2em;
+}
+.taxi_tab p {
+	font-family: 'Open Sans', sans-serif;
+	padding-left:70px;
+	font-size:1.193em;
+}
+
+.taxi_note{
+	color:#00b386;
+}
+h2 {							/*Heading in every tabs*/
+	font-family: 'Lato', sans-serif;
+	font-size:5em;
+	text-align:center;
+}
+
+.taxi_heading {
+	font-family: 'Bungee', cursive;
+	font-size: 3.5em;
+	text-align: center;
+}
+
+.photos { 					/*Make photo display correctly (especially in Taxi & renting)*/
+	margin-top:50px;
+}
+
+.photos1 {
+	margin-top: 0px;		/*Make photo display correctly (especially in Online Check-in) */
+}
+
+#accordion_hover h3{
+	color: #0da55c!important;
+	margin-left: 70px;
+	margin-top: auto;
+	font-size:2em;
+}
+
+
+
+.download_stores_middle {
+	
+	margin:auto;
+	text-align:center;
+
+}
+
+.download_taxi h2{
+	color: white!important;
+}
+
+
+/*Modal for the subscibe tab*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	z-index: 1; /* Sit on top */
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close_subscribe {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_subscribe:hover,
+.close_subscribe:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.btn_subscribe{
+	display: inline-block;
+	background-color: #6495ED;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	margin: 6px;
+	font-size: 20px;
+	padding: 16px 16px;
+	border-radius: 4px;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.btn_subscribe span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn_subscribe span:after {
+  content: '!!';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn_subscribe:hover span{
+	padding-right: 25px;
+}
+.btn_subscribe:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*End Modal*/ 
+
+
+
+/* Renting CSS*/
+.renting {				
+	background-color: rgba(255, 255, 255, 0.89);
+}
+
+.renting_container {
+	margin-left:5em;
+	width: 70%;
+}
+
+/*Modal confirmation deposit*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+	z-index: 1; /* Sit on top */
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #bce0ee;  
+    color: white;
+	font-size: 1em!important;
+}
+.modal_header h2{
+    font-size: 1em!important;
+}
+
+.modal-body {
+	padding: 2px 16px;
+	font-size: 2em;
+	text-align: center;
+}
+
+.modal-footer {
+    padding: 3px 16px;
+    background-color: #bce0ee;
+    color: white;
+}
+.btn-proceed{
+	display: inline-block;
+	background-color: #6495ED;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	margin: 6px;
+	font-size: 20px;
+	padding: 16px 16px;
+	border-radius: 4px;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.btn-proceed span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-proceed span:after {
+  content: '!!';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-proceed:hover span{
+	padding-right: 25px;
+}
+.btn-proceed:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/*End Modal*/ 
+
+.form-control {
+	background-color: white!important;
+}
+.button_deposit{
+	font-size: 1.8em!important;
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+    margin: auto;
+	transition-duration: 0.4s;
+	cursor: pointer;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.button_deposit:hover{
+	background-color: #008CBA;
+    color: white;
+}
+.checkin_tab{
+	background-color: #80ccff!important;
+}
+.checkin_tab p, .checkin_tab h3{
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	font-size:1.2em;
+}
+.checkin_tab h3{
+	font-size:2em;
+}
+/* Moving service content*/
+
+.moving_container {
+	float:left;
+	margin-left: 5em;
+	width: 40%;
+	position: absolute ;	
+}
+
+.moving_container h2, .moving_container label {
+	color: black;	
+}
+
+/* Footer icon social network */
+
+.social {
+	font-size: 60px;
+}
+.icons {
+	background-color: black;
+	padding: 35px;
+	text-align: center;
+	opacity: 0.85;
+}
+
+/* Wrapper */
+.icon-button {
+	background-color: white;
+	border-radius: 10.8rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 6.0rem;
+	height: 10.8rem;
+	line-height: 10.8rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	/* user-select: make the element unselectable if set to none; */
+	-webkit-user-select: none; /* Support for Google Chrome, Safari */
+	   -moz-user-select: none; /* Support for Google Chrome */
+	    -ms-user-select: none; /* Support for the rest browsers */
+	        user-select: none;
+	width: 10.8rem;
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.4s; /* Support for Google Chrome, Safari */
+	   -moz-transition: all 0.4s; /* Support for Google Chrome */
+	        transition: all 0.4s; /* Support for the rest browsers */
+	width: 0;
+}
+.icon-button:hover span {
+	width: 10.8rem;
+	height: 10.8rem;
+	border-radius: 10.8rem;
+	margin: -5.4rem;
+}
+.twitter span {
+	background-color: #4099ff;
+}
+.facebook span {
+	background-color: #3B5998;
+}
+.google-plus span {
+	background-color: #db5a3c;
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	color: white;
+	height: 10.8rem;
+	left: 0;
+	line-height: 10.8rem;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 10.8rem;
+	z-index: 30;
+}
+.icon-button .icon-twitter {
+	color: #4099ff;
+}
+.icon-button .icon-facebook {
+	color: #3B5998;
+}
+.icon-button .icon-google-plus {
+	color: #db5a3c;
+}
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus {
+	color: white;
+}
+
+/* Footer padding */
+.footer_padding {
+	min-height: 1em;
+}
+
+/* Circle around the button "To the top" */
+
+footer .glyphicon {
+	border: 2px solid #66e0ff;
+	border-radius: 100%;
+	color: #66a3ff;
+	font-size:2.5em;
+	text-align:center;
+	padding-left:2px;
+}
+
+/* Persona */
+@card-height: 250px;
+@card-width: 270px;
+@title-height: 90px;
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+.person-card {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  position: relative;
+  height: 315px; /* @card-height */
+  width: 320px;	/* @card-width */
+  overflow: hidden;
+  border: 1px solid rgb(45, 179, 0);
+  margin-left: 70px;
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.35);
+  transition: 0.3s;
+  width: 40%;
+  
+
+
+}
+.person-card .person-img {
+  width: 100%;
+  height: auto;
+  
+}
+.person-card .person-info {
+  position: absolute;
+  top:245px; /* @card-height - @title-height*/
+  height: 315px; /* @card-height; */
+  width: 100%;
+  color: #fff;
+  background-color: rgb(45, 179, 0);
+  opacity: 0.9;
+  -ms-transition: -ms-transform 0.75s;
+  -webkit-transition: -webkit-transform 0.75s;
+  transition: transform 0.75s;
+  
+}
+.person-card .person-info:hover {
+  -ms-transform: translateY(-180px); /* -(@card-height - @title-height) */
+  -webkit-transform: translateY(-180px); /* -(@card-height - @title-height) */
+  transform: translateY(-180px); /* -(@card-height - @title-height) */
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.35);
+}
+.person-card .person-info .details-title {
+  height: 55px;
+  font-size: 20px;
+  padding: 10px;
+  
+}
+.person-card .person-info .details-title small {
+  font-size: 70%;
+  color: #f7f7f7;
+
+}
+.person-card .person-info .details-body {
+  padding: 10px;
+  text-align: center;
+
+#wrapper {
+	width: 500px;
+}
