@@ -1,3 +1,11 @@
-﻿# Animation project
+﻿# 4WHEELS application
+The project was done as the final exam for the "Animation" course in the university. The aim of the project was to create a web site with animated elements using JavaScript, JQuery, Angular JS, CSS and Bootstrap.
+## Problem statement
+There are people who might be having problems regarding transportation. Such as: midnight travelling issues, obstacles related with people having no private vehicles, emergency cases, etc. Finding a taxi in emergency can often be major difficulty for people who do not have their own private cars. But a quickly raising online service aims to make finding a taxi driver anytime, either day or late night- as easy as booking for a bus ticket.
+## Vision statement
+People might be having difficulties in emergency cases, like when they have to reach hospitals-to see their sick friends, or sometimes when they are late to catch their flights. In this case, they would definitely like to get a taxi in a huge hurry. Thus, ‘4WHEELS’ is an application, designed to help those people who has such types of emergency issues, or who has issues regarding renting a car. In contrast with it, our company, ‘4WHEELS’ provides three kinds of special services for the customers. i.e. 
+a. Get a taxi without calling 
+b. Rent a car and
+c. Moving house
+Hence, with the use of 4WHEELS app, a user can be able to get a taxi, rent a car and can also be able to book a van when in need of moving his stuffs from his house to the other. Consequently, what a user has to do is: get a taxi not by calling but by just clicking a button in the app, which provides information about the nearest driver, the car number, driver’s name and his no. On the other hand, another special feature about our company is that: when a user adds his destination, the app automatically calculates the time, direction of travelling, and also the price-all at once, which makes the user easy to decide whether he wants to accept the price & info or not. Similarly, our company also holds feedback system where a user can be able to rate the driver in the app. Furthermore, if a customer wants to move house, then he could book a car via 4WHEELS, depending upon hours or days. Additionally, there is no delivery service for renting a car as the customer should come to our office and get the car keys by providing his ID (or passport) photocopies and driving license.
 
-The project was done as the final exam for the "Animation" course in the university in 2016. The aim of the project was to create a web site with animated elements using JavaScript, JQuery, Angular JS, CSS and Bootstrap. It was a group work done by four students. 
